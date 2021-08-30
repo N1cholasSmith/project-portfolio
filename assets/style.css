@@ -1,0 +1,85 @@
+:root {
+    --white:#f8f9fa;
+    --light-grey:#dee2e6;
+    --mid-grey:#adb5bd;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background:linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);
+    font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
+}
+
+ul {
+    display: flex;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+h1 {
+   
+    font-size: 85px; 
+    color: var(--white);
+}
+
+li {
+    font-size: 24;
+    flex-wrap: wrap;
+    font-size: 25px;
+    display:inline-block;
+    justify-content: space-around;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.background-image {
+    background:url(../images/AdobeStock_286811539.jpeg) fixed center;
+    height: 1920px;
+    width: 1080px;
+}
+
+.about-me {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+}
+
+#about-me-img {
+    height: auto;
+    width: 30%;
+    padding: 60px;
+}
+
+.about-me p {
+    font-size: 27.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 50px 10px 50px;
+    color: black;
+}
+
+.theme-box {
+    white-space: pre-wrap;
+    overflow: auto;
+    background-color: #adb5bd;
+    opacity: 50%;
+    padding: 5px 40px 5px 40px;
+    border: 2px solid;
+    border-radius: 15px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
