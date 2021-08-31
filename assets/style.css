@@ -4,6 +4,12 @@
     --mid-grey:#adb5bd;
 }
 
+body {
+background-color: var(--mid-grey);
+}
+
+/* Header...................................................................................................................... */
+
 header {
     width: 100%;
     margin: 0 auto;
@@ -17,24 +23,17 @@ header {
     font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
 }
 
-ul {
-    display: flex;
-}
-
-a {
-    color: var(--white);
-    text-decoration: none;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-}
-
 h1 {
-   
     font-size: 85px; 
     color: black;
 }
 
+ul {
+    display: flex;
+}
+
 li {
-    font-size: 24;
+    font-size: 24px;
     flex-wrap: wrap;
     font-size: 25px;
     display:inline-block;
@@ -43,45 +42,138 @@ li {
     margin-right: 30px;
 }
 
-.background-image {
-    background:url(../images/AdobeStock_286811539.jpeg) fixed center;
-    height: 1920px;
-    width: 1080px;
+a {
+    color: var(--white);
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+/*about me section....................................................................................................*/
+
+.about-me-section {
+    display:flex;
+    align-items: center;
+}
+
+.about-me-row {
+    width: 100%;
+    flex-direction:row;
+
+}
+
+.about-me-section .about-me-row {
+    width:50%;
 }
 
 .about-me {
-    font-size: 18px;
+    font-size: 40px;
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 60px;
-
+    padding: 20px 20px 20px 20px;
 }
 
-#about-me-img {
-    height: auto;
-    width: 30%;
-    padding: 60px;
+h2 {
+    font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
-.about-me p {
-    font-size: 27.5px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px 50px 10px 50px;
+.job-title {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.about-me-row p {
+    font-size: 18px;
+    font-family: sans-serif, Arial, Helvetica;
+    padding: 0px 20px;
     color: black;
+    margin-bottom:8px ;
 }
 
-.theme-box {
-    white-space: pre-wrap;
-    overflow: auto;
-    background-color: #adb5bd;
-    opacity: 50%;
-    padding: 5px 40px 5px 40px;
-    border: 2px solid;
-    border-radius: 15px;
-    margin-left: 45px;
-    margin-right: 45px;
+P {
+    display: block;
+    margin-block-start: 15px;
+    margin-inline-end: 5px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
+
+img {
+    display: block;
+}
+
+.about-me-img {
+    margin-right: auto;
+    padding: 20px 5px 20px 10px;
+   
+}
+
+.about-me-section .about-me-row {
+    height: auto;
+    max-width: 50%;
+}
+
+/* Project portfolio.......................................................................................................................... */
+/* header */
+.project-portfolio-header {
+    display: flex;
+    padding: 20px 0px;
+    /* no background color..............................? */
+    background: linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);
+}
+
+.project-portfolio-h2 {
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+/* Project Portfolio Section.................................................................................................... */
+
+.project-portfolio {
+    display: flex;
+    align-items: center;
+}
+
+.side-subtitle {
+    position: absolute;
+    display: block;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* not black, no gradient...............................?? */
+.side-subtitle {
+    /* display: flex; */
+    background:linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);
+    color: black;
+    position:absolute;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.project-portfolio img {
+    /* display: flex; */
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+  
+}
+
+
+/* Contact Me Section */
 
 form {
     display: flex;
@@ -90,10 +182,11 @@ form {
     align-items: center;
     font-size: 20px;
     font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
-    padding: 20px 20px;
+    padding: 40px 40px;
 }
 
 footer, form {
+
     background:linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);  
 }
 
@@ -108,4 +201,15 @@ footer {
 h3 {
     font-size: 35px;
     font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
+}
+
+@media screen and (max-width: 768px){
+.about-me-section {
+    flex-direction: column;
+}
+.about-me-row .about-me-section {
+    width: 100%;
+    flex-direction: column;
+}
+
 }
