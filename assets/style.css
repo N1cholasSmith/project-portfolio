@@ -52,13 +52,12 @@ a {
 
 .about-me-section {
     display:flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .about-me-row {
     width: 100%;
     flex-direction:row;
-
 }
 
 .about-me-section .about-me-row {
@@ -108,6 +107,8 @@ img {
 }
 
 .about-me-img {
+    display: flex;
+    flex-wrap: wrap;
     margin-right: auto;
     padding: 20px 5px 20px 10px;
    
@@ -127,6 +128,10 @@ img {
     background: linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);
 }
 
+.project-card {
+    position: relative;
+}
+
 .project-portfolio-h2 {
     width: 100%;
     text-align: center;
@@ -142,11 +147,13 @@ h2 {
 .project-portfolio {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .side-subtitle {
     position: absolute;
     display: block;
+    justify-content: flex-end;
 }
 
 a:-webkit-any-link {
@@ -184,6 +191,13 @@ form {
     font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
     padding: 40px 40px;
 }
+
+.form-row {
+    display:flex;
+    margin-bottom: 10px;
+    align-items: center;
+} 
+
 
 footer, form {
 
