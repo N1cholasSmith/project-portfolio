@@ -52,22 +52,13 @@ a {
 
 .about-me-section {
     display:flex;
-    justify-content: center;
-}
-
-.about-me-row {
-    width: 100%;
-    flex-direction:row;
-}
-
-.about-me-section .about-me-row {
-    width:50%;
+    justify-content: space-between;
 }
 
 .about-me {
     font-size: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px 20px 20px 20px;
 }
 
@@ -87,6 +78,8 @@ h2 {
 }
 
 .about-me-row p {
+    display:flex;
+    justify-content: flex-start;
     font-size: 18px;
     font-family: sans-serif, Arial, Helvetica;
     padding: 0px 20px;
@@ -102,6 +95,14 @@ P {
     margin-inline-end: 0px;
 }
 
+.intro {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    
+}
+
 img {
     display: block;
 }
@@ -109,14 +110,17 @@ img {
 .about-me-img {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     margin-right: auto;
     padding: 20px 5px 20px 10px;
-   
+    height: auto;
+    width: 50%; 
 }
 
 .about-me-section .about-me-row {
-    height: auto;
-    max-width: 50%;
+    flex: 0 1 90%;
+    min-height: 100%;
 }
 
 /* Project portfolio.......................................................................................................................... */
@@ -146,14 +150,15 @@ h2 {
 
 .project-portfolio {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .side-subtitle {
     position: absolute;
     display: block;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
 }
 
 a:-webkit-any-link {
@@ -163,7 +168,9 @@ a:-webkit-any-link {
 
 /* not black, no gradient...............................?? */
 .side-subtitle {
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background:linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);
     color: black;
     position:absolute;
@@ -177,6 +184,15 @@ a:-webkit-any-link {
     max-width: 100%;
     height: auto;
   
+}
+
+.node-project-card,
+.tax-project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+
 }
 
 
@@ -220,10 +236,17 @@ h3 {
 @media screen and (max-width: 768px){
 .about-me-section {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.about-me-img {
+    margin-left: 25%;
+}
+
 .about-me-row .about-me-section {
     width: 100%;
     flex-direction: column;
 }
 
-}
+
