@@ -5,7 +5,7 @@
 }
 
 body {
-background-color: var(--mid-grey);
+background-color: var(--light-grey);
 }
 
 /* Header...................................................................................................................... */
@@ -19,7 +19,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background:linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);
+    background:linear-gradient(-60deg,#0077B6, #0096C7 10%,#00B4D8 30%,#48CAE4 43%,#90E0EF 58%,#ADE8F4 76%,#CAF0F8 97%);
     font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
 }
 
@@ -42,11 +42,19 @@ li {
     margin-right: 30px;
 }
 
+li:hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+    transition: .4ms;
+}
+
 a {
-    color: var(--white);
+    color: black;
     text-decoration: none;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
+
+
 
 /*about me section....................................................................................................*/
 
@@ -87,7 +95,7 @@ h2 {
     margin-bottom:8px ;
 }
 
-P {
+p {
     display: block;
     margin-block-start: 15px;
     margin-inline-end: 5px;
@@ -101,10 +109,6 @@ P {
     flex-wrap: wrap;
     margin-left: 30px;
     
-}
-
-img {
-    display: block;
 }
 
 .about-me-img {
@@ -128,8 +132,7 @@ img {
 .project-portfolio-header {
     display: flex;
     padding: 20px 0px;
-    /* no background color..............................? */
-    background: linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);
+    background:linear-gradient(-60deg,#0077B6, #0096C7 10%,#00B4D8 30%,#48CAE4 43%,#90E0EF 58%,#ADE8F4 76%,#CAF0F8 97%);
 }
 
 .project-card {
@@ -141,62 +144,69 @@ img {
     text-align: center;
 }
 
-h2 {
+h4 {
     font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
     font-size: 40px;
 }
 
 /* Project Portfolio Section.................................................................................................... */
 
-.project-portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.side-subtitle {
-    position: absolute;
-    display: block;
-    /* justify-content: flex-end; */
+.sub-section {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
 }
 
 a:-webkit-any-link {
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-/* not black, no gradient...............................?? */
-.side-subtitle {
+.project-card a .horiseon-image {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    background:linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);
+    width: 100%;
+    height: auto;
+    position:relative;
+    object-fit: cover;
+}
+
+
+.latest-project {
+    background:linear-gradient(-60deg,#CAF0F8, #ADE8F4 10%,#90E0EF 30%,#48CAE4 43%,#00B4D8 58%,#0096C7 76%,#0077B6 97%);
     color: black;
     position:absolute;
     z-index: 1;
-    white-space: nowrap;
+    margin-top: 200px;
+    font-size: 40px;
+    opacity: 80%;
 }
 
-.project-portfolio img {
-    /* display: flex; */
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-  
+.side-subtitle-mini h5 {
+    background:linear-gradient(-60deg,#CAF0F8, #ADE8F4 10%,#90E0EF 30%,#48CAE4 43%,#00B4D8 58%,#0096C7 76%,#0077B6 97%);
+    color: black;
+    z-index: 1;
+    margin-top: 25px;
+    font-size: 40px;
+    font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
+    opacity: 80%;
+    position: absolute;
 }
 
-.node-project-card,
-.tax-project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-evenly;
-
+.sub-project-card {
+    height: 400px;
+    width: 33.33%;
+    border: 4px solid var(--light-grey);
+    position: relative;
 }
 
 
-/* Contact Me Section */
+.sub-project-card a img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
 
 form {
     display: flex;
@@ -210,14 +220,42 @@ form {
 
 .form-row {
     display:flex;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     align-items: center;
+    
 } 
+
+.send-button {
+    margin-top: 20px;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    padding: 10px;
+}
+.send-button:hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+}
+.send-button:active {
+	position:relative;
+	top:1px;
+}
 
 
 footer, form {
 
-    background:linear-gradient(-60deg,#f99d1c,#f99c1c 10%,#f4781f 30%,#f16221 43%,#f05a22 58%,#ee1d62 76%,#ed0080 97%);  
+    background:linear-gradient(-60deg,#0077B6, #0096C7 10%,#00B4D8 30%,#48CAE4 43%,#90E0EF 58%,#ADE8F4 76%,#CAF0F8 97%);
 }
 
 footer {
@@ -227,26 +265,51 @@ footer {
     justify-content: space-evenly;
 }
 
-
-h3 {
+h6 {
     font-size: 35px;
     font-family: 'Do Hyeon', sans-serif, 'Times New Roman', Times, serif;
 }
 
+@media screen and (max-width: 992px) {
+    .sub-section {
+        flex: 0 0 50%;
+    }
+}
+
 @media screen and (max-width: 768px){
-.about-me-section {
+
+    nav ul {
+    font-size: 15px;
+    flex-direction: column;
+    }    
+
+    .side-subtitle h4 {
+        margin-top: 75px;
+    }
+
+    .about-me-section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    }   
 
-.about-me-img {
+    .about-me-img {
     margin-left: 25%;
-}
+    }
 
-.about-me-row .about-me-section {
+    .about-me-row .about-me-section {
     width: 100%;
     flex-direction: column;
-}
+    }
 
+    .sub-section {
+    flex-direction: column;
+    }   
+
+    .sub-project-card {
+        height: 400px;
+        width: 100%;
+        border: 1px solid black;
+        position: relative;
+} 
 
