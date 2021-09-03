@@ -7,7 +7,7 @@
 ## Description
 My Project Portfolio displays the technical excellence I possess as a Full Stack Web Developer and the values that shape me. The motivating factor behind my portfolio is to show my professional excellence and continual improvement in a form that can be visualized and showcased. The projects I have completed are displayed within this webpage and available for review and speculation. I am able to be contacted through the contact information at the bottom if you wish to inqure.
 
-[nsmithprojectportfolio.com](https://github.com/N1cholasSmith/project-portfolio)
+[nsmithprojectportfolio.com](https://n1cholassmith.github.io/project-portfolio/)
 ---
 ## Table of Contents
 - [Usage] (#usage)
