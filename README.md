@@ -21,7 +21,7 @@ My Project Portfolio displays the technical excellence I possess as a Full Stack
 Nicholas Smith Project Portfolios website is easily naviagted through the (header)(nav) bar. When clicking a one of four options in the (nav) bar you will be scrolled to the respective section on the page for further information and linked to external sources from there.
 
     
-![Project Portfolio](/images/project-portfolio-screenshot.png)
+![Project Portfolio](/images/project-porfolio-screenshot.png)
 
 
     
